@@ -10,9 +10,9 @@
 
   $number1 = $number *1 - 1 ;
 
-  $number2 = $number * 25;
+  $number2 = $number * 50;
 
-  for($i=$number1 * 25; $i<$number2; $i++){
+  for($i=$number1 * 50; $i<$number2; $i++){
     $x = $i + 1;
 
     echo '<div class="col-lg-3 col-md-6 col-sm-9"> 
