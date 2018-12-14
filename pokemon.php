@@ -1,6 +1,6 @@
 <?php
 
-include "nav.php";
+
 
 $id = $_GET['id'];
 
@@ -11,15 +11,24 @@ $url = "http://pokeapi.co/api/v2/pokemon/$id/";
 
 $json = file_get_contents($url);
 
-$pokemon = json_decode($json); 
+$pokemon = json_decode($json);
+
+echo'<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pokemon || ' . $pokemon -> name . '</title>';
+
+include "nav.php";
 
 echo '<div class="d-flex justify-content-center ">
 <div class="container h-50 row d-flex justify-content-center mb-5 align-items-center bgWhite">
     <div class="col-10 m-5 p-5" style="background: white; border-radius:25px;">
     <h1 class="text-center">' . $pokemon -> name . '</h1>
     <img class="pokeImg" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' . $id . '.png" alt="' . $pokemon -> name . '">
-    <div class="type ' . $pokemon -> types[0] -> type -> name . '">'. $pokemon -> types[0] -> type -> name . '</div>'
-    .(isset($pokemon ->types[1])?'<div class="type ' . $pokemon ->types[1] -> type -> name . '">' . $pokemon ->types[1] -> type -> name . '</div>'
+    <div class="type m-1 p-1 ' . $pokemon -> types[0] -> type -> name . '">'. $pokemon -> types[0] -> type -> name . '</div>'
+    .(isset($pokemon ->types[1])?'<div class="type m-1 p-1 ' . $pokemon ->types[1] -> type -> name . '">' . $pokemon ->types[1] -> type -> name . '</div>'
     :"").
     '<div class="d-flex justify-content-center mt-5" style="width: 100%;">
     <nav aria-label="Page navigation example">

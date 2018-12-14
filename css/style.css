@@ -88,8 +88,6 @@ body{
 }
 
 .type{
-    margin: 3;
-    padding: 3 10;
     display: inline-block;
     border-radius: 5px;
     color: aliceblue;
