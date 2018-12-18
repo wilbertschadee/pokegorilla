@@ -22,7 +22,7 @@
                    
                     <p>
                     First, what is your name?<br>
-                    <button onclick="nameFunc()">...</button>
+                    <button onclick="nameFunc()">. . .</button>
                     </p>
                     <p id="demo"></p>
 
@@ -33,7 +33,7 @@
         </div>
         <script>
         function nameFunc() {
-    var person = prompt("Please enter your name", "Harry Potter");
+    var person = prompt("Please enter your name", "Red");
     if (person != null) {
         document.getElementById("demo").innerHTML =" Right! So your name is " + person + "! <br><br>" + person + "! Your very own POKEMON legend is about to unfold! A world of dreams and adventures with POKEMON awaits! Let's go!";
     }
